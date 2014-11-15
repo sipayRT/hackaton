@@ -3,7 +3,7 @@
  * @description TODO.
  */
 
-modules.define('map',
+modules.define(this.name,
     ['i-bem__dom', 'ymaps'],
     function(provide, DOM, ymaps) {
 
@@ -18,11 +18,12 @@ modules.define('map',
 
             _drawMap : function() {
                 var ctx = this;
+                var params = this.params;
                 ymaps.ready(function() {
-                    ctx.createMap( ctx.params.id, {
-                            center : ctx.params.center,
-                            zoom : ctx.params.zoom,
-                            controls : ctx.params.controls
+                    ctx.createMap( params.id, {
+                            center : params.center,
+                            zoom : params.zoom,
+                            controls : params.controls
                         }
                     );
                     ctx.addGeoObjects();
@@ -31,6 +32,10 @@ modules.define('map',
 
             createMap : function(name, config) {
                 this._map = new ymaps.Map(name, config);
+            },
+
+            deleteMap : function() {
+                this._map.destroy();
             },
 
             addGeoObjects : function() {
