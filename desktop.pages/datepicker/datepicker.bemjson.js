@@ -214,16 +214,16 @@
                                 content: [
                                     {
                                         block : 'input',
-                                        mods : { theme : 'simple', 'has-clear' : true },
+                                        mods : { 'has-clear' : true },
                                         mix: {block: 'datepicker', elem: 'input'},
                                         val : 'value',
                                         placeholder : 'simple'
                                     },
                                     {
                                         block : 'popup',
-                                        mods : { autoclosable: true, theme : 'islands', target: 'anchor' },
+                                        mods : { autoclosable: true, target: 'anchor' },
                                         content : 'islands',
-                                        mix: {block: 'datepicker', elem: 'popup'}
+                                        mix : {block : 'datepicker', elem : 'popup'}
                                     }
                                 ]
                             }
@@ -231,21 +231,47 @@
                         {
                             elem : 'cell',
                             content : {
-                                block : 'input',
-                                mods : { theme : 'simple', 'has-clear' : true },
-                                val : 'value',
-                                placeholder : 'simple'
+                                block : 'datepicker',
+                                js : true,
+                                content : [
+                                    {
+                                        block : 'input',
+                                        mods : { theme : 'simple', 'has-clear' : true },
+                                        mix : {block : 'datepicker', elem : 'input'},
+                                        val : 'value',
+                                        placeholder : 'simple'
+                                    },
+                                    {
+                                        block : 'popup',
+                                        mods : { autoclosable : true, theme : 'simple', target : 'anchor' },
+                                        content : 'islands',
+                                        mix : { block : 'datepicker', elem : 'popup' }
+                                    }
+                                ]
                             }
                         },
                         {
                             elem : 'cell',
                             content : {
-                                block : 'input',
-                                mods : { theme : 'islands', size : 'm', 'has-clear' : true },
-                                val : 'value',
-                                placeholder : 'islands'
+                                block : 'datepicker',
+                                js : true,
+                                content : [
+                                    {
+                                        block : 'input',
+                                        mods : { theme : 'islands', size : 'm', 'has-clear' : true },
+                                        mix: { block : 'datepicker', elem : 'input' },
+                                        val : 'value',
+                                        placeholder : 'simple'
+                                    },
+                                    {
+                                        block : 'popup',
+                                        mods : { autoclosable : true, theme : 'islands', target: 'anchor' },
+                                        content : 'islands',
+                                        mix: { block : 'datepicker', elem : 'popup' }
+                                    }
+                                ]
                             }
-                        }
+                        },
                     ]
                 },
                 {
