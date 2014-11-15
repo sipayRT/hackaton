@@ -10,6 +10,6 @@ block('map')(
       };
     }),
     attrs()( function() {
-      return { id : this.ctx.id };
+      return { 'id' : this.ctx.id };
     })
 );

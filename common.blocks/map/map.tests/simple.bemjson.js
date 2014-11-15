@@ -10,7 +10,7 @@
             block : 'wrapper',
             content : {
                 block : 'map',
-                id : 'test_map',
+                id : 'map',
                 center : [55.751574, 37.573856],
                 zoom : 10,
                 controls : ['default'],

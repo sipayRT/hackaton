@@ -1,6 +1,6 @@
 /**
  * @module map
- * @description TODO.
+ * @description map block.
  */
 
 modules.define(this.name,
@@ -16,41 +16,42 @@ modules.define(this.name,
                 }
             },
 
+            /**
+             * Draw map unit
+             */
             _drawMap : function() {
-                var ctx = this;
                 var params = this.params;
                 ymaps.ready(function() {
-                    ctx.createMap( params.id, {
-                            center : params.center,
-                            zoom : params.zoom,
-                            controls : params.controls
-                        }
-                    );
-                    ctx.addGeoObjects();
-                });
+                    this._map = new ymaps.Map(params.id, params);
+                    this._drawGeoObjects();
+                }.bind(this));
             },
 
-            createMap : function(name, config) {
-                this._map = new ymaps.Map(name, config);
-            },
-
-            deleteMap : function() {
-                this._map.destroy();
-            },
-
-            addGeoObjects : function() {
-                var ctx = this;
-                ctx.params.geoObjects.forEach(
+            /**
+             * Draws geoObjects derived from bemjson
+             */
+            _drawGeoObjects : function() {
+                this.params.geoObjects.forEach(
                     function(geoObject) {
-                        ctx._map.geoObjects.add(new ymaps.GeoObject({
-                            geometry : geoObject
-                        }));
-                    }
+                        this.addGeoObject(geoObject);
+                    }, this
                 );
             },
 
             /**
-             * @return {Map | Null} Экземпляр карты, либо null, если карта не инстанцирована.
+             * Add geoObject to map
+             * @param {Object} geoObject
+             */
+            addGeoObject : function(geoObject) {
+                ymaps.ready(function() {
+                    this._map.geoObjects.add(new ymaps.GeoObject({
+                        geometry : geoObject
+                    }));
+                }.bind(this));
+            },
+
+            /**
+             * @return {Map | Null}
              */
             getMap : function() {
                 return this._map || null;
