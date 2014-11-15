@@ -1,15 +1,15 @@
 block('map')(
-    tag()('div'),
     js()(function() {
+      var ctx = this.ctx;
       return {
-        'id' : this.ctx.id,
-        'center' : this.ctx.center,
-        'zoom' : this.ctx.zoom,
-        'controls' : this.ctx.controls,
-        'geoObjects' : this.ctx.geoObjects
+        id : ctx.id,
+        center : ctx.center,
+        zoom : ctx.zoom,
+        controls : ctx.controls,
+        geoObjects : ctx.geoObjects
       };
     }),
     attrs()( function() {
-      return { 'id' : this.ctx.id };
+      return { id : this.ctx.id };
     })
 );
