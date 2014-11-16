@@ -1,5 +1,8 @@
 ({
     shouldDeps : [
-        { block : 'ymaps' }
+        {
+            block : 'ymaps'
+            // mod
+        }
     ]
 })

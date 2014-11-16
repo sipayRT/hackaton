@@ -1,9 +1,9 @@
 /**
- * @module ymaps__config
+ * @module ymaps__config_provider_yandex
  * @description Configuration for Yandex Map api loader
  */
-// TODO: Сделать возможность использовать не только yandex maps
-modules.define('ymaps__config', function(provide) {
+
+modules.define('ymaps__config_provider_yandex', function(provide) {
 
 provide(/** @exports */{
     /**
