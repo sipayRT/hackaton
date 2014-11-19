@@ -1,6 +1,7 @@
 ({
     block : 'cut',
-    js : { expandedText : 'cut-hide' },
+    mods : { theme : 'hackaton' },
     switcher : 'cut-show',
+    expandedText : 'cut-hide',
     content : 'cut-text'
 })

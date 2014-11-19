@@ -4,20 +4,21 @@
     ],
     shouldDeps : [
         { elems : ['switcher', 'container'] },
-        { block : 'link', mods : { theme : 'islands', pseudo : true } }
+        { block : 'link', mods : { theme : 'islands', pseudo : true } }/*,
+        { block : 'button', mods : { theme : 'islands' } }*/
     ]
 },
 {
     tech : 'spec.js',
     mustDeps : [
         { tech : 'bemhtml', block : 'cut', mods : { theme : 'hackaton' } },
-        { block : 'link', mods : { theme : 'islands', type : 'pseudo' } }
+        { tech : 'bemhtml', block : 'link', mods : { theme : 'islands', type : 'pseudo' } }
     ]
 },
 {
     tech : 'tmpl-spec.js',
     mustDeps : [
         { tech : 'bemhtml', block : 'cut', mods : { theme : 'hackaton' } },
-        { block : 'link', mods : { theme : 'islands', type : 'pseudo' } }
+        { tech : 'bemhtml', block : 'link', mods : { theme : 'islands', type : 'pseudo' } }
     ]
 }]

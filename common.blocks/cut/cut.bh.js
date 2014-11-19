@@ -2,7 +2,7 @@ module.exports = function(bh) {
 
     bh.match('cut', function(ctx, json) {
         ctx
-            .js(true)
+            .js({ expandedText : json.expandedText || 'Hide' })
             .content([
                 { elem : 'container', content : json.content },
                 {

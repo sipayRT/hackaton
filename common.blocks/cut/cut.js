@@ -15,25 +15,25 @@ provide(BEMDOM.decl(this.name, {
             'inited' : function() {
                 this._switcher = null;
                 this._popup = null;
-                this._params = {
+                this._switcherText = {
                     expanded : this.params.expandedText  || 'Hide',
                     collapsed : this.getSwitcher().text() || 'Show'
                 };
             }
         },
 
-        'opened' : function(modName, modVal) {
+        'showed' : function(modName, modVal) {
             this.setMod((this.getSwitcher()), 'opened', modVal);
             this.setMod((this.getContainer()), 'visible', modVal);
 
-            this._switcherTextChange();
+            if(this.hasMod('switcher')) return false;
+
+            this._changeSwitcherText(modName, modVal);
         }
     },
 
-    _switcherTextChange : function() {
-        var text = this.hasMod('opened')? this._params.expanded : this._params.collapsed;
-
-        this._switcher.html(text);
+    _changeSwitcherText : function(modName, modVal) {
+        this.getSwitcher().html(modVal? this._switcherText.expanded : this._switcherText.collapsed);
     },
 
     /**
@@ -52,8 +52,13 @@ provide(BEMDOM.decl(this.name, {
     getContainer : function() {
         return this._container ||
             (this._container = this.findElem('container', true));
-    },
+    }
 
+}, {
+    live : function() {
+        this.liveBindTo('switcher', 'click', this.onSwitcherClick);
+        return this.__base.apply(this, arguments);
+    },
     /**
      * On BEM click event handler
      * @param {events:Event} e
@@ -62,12 +67,7 @@ provide(BEMDOM.decl(this.name, {
     onSwitcherClick : function(e) {
         e.preventDefault();
 
-        this.toggleMod('opened');
-    }
-
-}, {
-    live : function() {
-        this.liveBindTo('switcher', 'click', this.prototype.onSwitcherClick);
+        this.toggleMod('showed');
     }
 }));
 

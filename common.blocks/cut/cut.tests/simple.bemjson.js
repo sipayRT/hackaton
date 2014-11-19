@@ -10,10 +10,8 @@
         { tag : 'h2', content : 'Cut' },
         {
             block : 'cut',
-            js : {
-                expandedText : 'Hide'
-            },
-            mods : { theme : 'simple' },
+            expandedText : 'Hide',
+            mods : { theme : 'hackaton' },
             switcher : 'Show',
             content : 'Text here'
         }
