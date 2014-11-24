@@ -1,0 +1,99 @@
+.calendar_theme_simple
+{
+    display: inline-block;
+
+    font-size: 14px;
+    text-align: center;
+    line-height: 18px;
+    font-family: Arial, Helvetica, sans-serif;
+
+    .calendar__content
+    {
+        position: relative;
+    }
+
+    .calendar__switcher,
+    .calendar__title
+    {
+        display: inline-block;
+        vertical-align: middle;
+    }
+
+    .calendar__title
+    {
+        margin: 0 15px;
+    }
+
+    .calendar__cell
+    {
+        padding: 4px 7px;
+        transition: background 0.3s;
+        cursor: pointer;
+
+        &:hover
+        {
+            background: #fff7db;
+        }
+
+        &_state_active
+        {
+            background: #fff4a8;
+        }
+
+        &_state_disable
+        {
+            opacity: 0.3;
+
+            &:hover
+            {
+                background: none !important;
+                cursor: default !important;
+            }
+        }
+    }
+
+    .calendar__grid
+    {
+        margin: 10px auto 0;
+        border-top: 1px solid #fc0;
+        padding: 10px 0 0;
+    }
+
+    .calendar__switcher
+    {
+        transition: transform 0.3s;
+        cursor: pointer;
+        position: absolute;
+        top: 4px;
+
+        &_dest_prev
+        {
+            left: 13px;
+
+            &:before
+            {
+                content: '← ';
+            }
+
+            &:hover
+            {
+                transform: translateX(-3px);
+            }
+        }
+
+        &_dest_next
+        {
+            right: 13px;
+
+            &:after
+            {
+                content: ' →';
+            }
+
+            &:hover
+            {
+                transform: translateX(3px);
+            }
+        }
+    }
+}
