@@ -2,8 +2,8 @@
     block : 'page',
     title : 'YMaps Examples',
     head : [
-        { elem : 'css', url : '_map.css' },
-        { elem : 'js', url : '_map.js' }
+        { elem : 'css', url : '_simple.css' },
+        { elem : 'js', url : '_simple.js' }
     ],
     content : [
         {

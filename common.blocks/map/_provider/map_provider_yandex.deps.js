@@ -1,10 +1,10 @@
-// ({
-//     shouldDeps : [
-//         {
-//             block : 'ymaps',
-//             mods : {
-//                 provider : 'yandex'
-//             }
-//         }
-//     ]
-// })
+({
+    shouldDeps : [
+        {
+            block : 'map-helper',
+            mods : {
+                provider : 'yandex'
+            }
+        }
+    ]
+})

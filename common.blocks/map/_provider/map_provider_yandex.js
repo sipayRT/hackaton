@@ -3,8 +3,8 @@
  * @description map block.
  */
 
-modules.define(this.name,
-    ['i-bem__dom', 'ymaps'],
+modules.define('map_provider_yandex',
+    ['i-bem__dom', 'map-helper_provider_yandex'],
     function(provide, DOM, ymaps) {
 
         DOM.decl('map', {
@@ -36,29 +36,22 @@ modules.define(this.name,
                         var coords = geoObject.coordinates;
                         var properties = geoObject.properties;
                         var options = geoObject.options;
+                        var type;
                         switch(geoObject.type) {
                             case 'placemark':
-                                this.addGeoObject(
-                                    {
-                                        type : 'Point',
-                                        coordinates : coords
-                                    }, properties, options);
+                                type = 'Point';
                                 break;
                             case 'polyline':
-                                this.addGeoObject(
-                                    {
-                                        type : 'LineString',
-                                        coordinates : coords
-                                    }, properties, options);
+                                type = 'LineString';
                                 break;
                             case 'rectangle':
-                                this.addGeoObject(
-                                    {
-                                        type : 'Rectangle',
-                                        coordinates : coords
-                                    }, properties, options);
+                                type = 'Rectangle';
                                 break;
                         }
+                        this.addGeoObject({
+                            type : type,
+                            coordinates : coords
+                        }, properties, options);
                     }, this
                 );
             },
