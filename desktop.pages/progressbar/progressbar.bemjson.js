@@ -19,7 +19,7 @@
             {
                 block : 'progressbar',
                 mods : { theme: 'hackaton', size : 'm', text : true },
-                progress : 95
+                progress : 15
             }
         ]
     }

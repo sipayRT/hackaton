@@ -1,0 +1,9 @@
+block('progressbar').mod('text', true).content()(function() {
+    return [
+        applyNext(),
+        {
+            elem : 'text',
+            content : this._progress
+        }
+    ];
+});
