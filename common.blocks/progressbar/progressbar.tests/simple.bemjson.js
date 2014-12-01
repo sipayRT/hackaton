@@ -20,18 +20,23 @@
             {
                 block : 'progressbar',
                 mods : { theme : 'hackaton', size : 'm', text : true },
-                progress : 95
+                progress : 88
             },
-            '<br>theme-hackaton, size-m, no text (55%): <br><br>',
+            '<br>theme-hackaton, no progress: <br><br>',
             {
                 block : 'progressbar',
-                mods : { theme : 'hackaton', size : 'm', text : false },
-                progress : 55
+                mods : { theme : 'hackaton', size : 's', text : true }
+            },
+            '<br>theme-hackaton, no text (77%): <br><br>',
+            {
+                block : 'progressbar',
+                mods : { theme : 'hackaton', size : 's' },
+                progress : 77
             },
             '<br>theme-islands (35%): <br><br>',
             {
                 block : 'progressbar',
-                mods : { theme : 'islands', text : false },
+                mods : { theme : 'islands' },
                 progress : 35
             }
         ]
