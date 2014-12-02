@@ -17,11 +17,9 @@
 		},
 		{
 			block : 'cut',
-			js : {
-				expandedText : 'Скрыть'
-			},
-			mods : { type: 'inline', theme : 'simple', size: 's' },
+			mods : { theme : 'hackaton', switcher : 'button', size : 'm' },
 			switcher : 'Подробнее',
+			expandedText : 'Скрыть',
 			content : [
 				'Время шло, сервисы развивались и всё больше разработчиков ',
 				'интерфейсов вкладывали свои усилия в развитие Яндекса.'

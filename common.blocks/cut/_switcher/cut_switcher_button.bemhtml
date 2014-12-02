@@ -1,4 +1,4 @@
-block('cut')(
+block('cut').mod('switcher', 'button')(
 
     js()(function(){
         return { expandedText : this.ctx.expandedText || 'Hide' };
@@ -8,10 +8,10 @@ block('cut')(
         return [
             { elem : 'container', content : this.ctx.content || 'Text here' },
             {
-                block : 'link',
-                mods : { pseudo : true, theme : 'islands' },
+                block : 'button',
+                mods : { type : 'button', theme : 'islands', size : this.ctx.mods.size || 's' },
                 mix : { block : 'cut', elem : 'switcher' },
-                content : this.ctx.switcher || 'Show'
+                text : this.ctx.switcher || 'Show'
             }
         ];
     })
