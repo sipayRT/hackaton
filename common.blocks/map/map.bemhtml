@@ -1,39 +1,49 @@
 block('map')(
     js()(function() {
         var ctx = this.ctx;
-        var objects = [];
-        ctx.geoObjects.forEach(function(geoObject) {
-            var options;
-            var geoOptions = geoObject.options,
-                preset = geoObject.iconContent &&
-                            (geoOptions && geoObject.options.preset || 'islands#blueStretchyIcon');
-                // TODO: Добавление всех опций из geoObject.options в options
-                // geoOptions && (for (opt on geoOptions) {
-                //     options[opt] = geoOptions[opt]
-                // }),
-                options = {
-                    preset : preset,
-                    draggable : geoOptions && geoObject.options.draggable
-                };
+        switch (ctx.mods.provider) {
+            case 'yandex':
+                ctx.defaultType = 'yandex#map';
+                ctx.objects = [];
+                ctx.geoObjects && ctx.geoObjects.forEach(function(geoObject) {
+                    var options = {};
+                    if (geoObject.options) {
+                        var geoOptions = geoObject.options;
+                        options['preset'] = geoObject.iconContent &&
+                                    (geoObject.options.preset || 'islands#blueStretchyIcon');
+                        if (geoOptions) {
+                            for(var opt in geoOptions) {
+                                options[opt] = geoOptions[opt];
+                            }
+                        }
+                    } else {
+                        options['preset'] = geoObject.iconContent && 'islands#blueStretchyIcon';
+                    }
 
-            objects.push({
-                type : geoObject.type || 'placemark',
-                coordinates : geoObject.coordinates,
-                properties : {
-                    iconContent : geoObject.iconContent,
-                    hintContent : geoObject.hintContent,
-                    balloonContent : geoObject.balloonContent
-                },
-                options : options
-            });
-        });
+                    ctx.objects.push({
+                        type : geoObject.type || 'placemark',
+                        coordinates : geoObject.coordinates,
+                        properties : {
+                            iconContent : geoObject.iconContent,
+                            hintContent : geoObject.hintContent,
+                            balloonContent : geoObject.balloonContent
+                        },
+                        options : options
+                    });
+                });
+                break;
+            case 'google':
+                ctx.defaultType = 'ROADMAP';
+                break;
+        }
+
         return {
             id : ctx.id,
             center : ctx.center,
-            zoom : ctx.zoom,
+            zoom : ctx.zoom || 12,
+            type : ctx.type || ctx.defaultType,
             controls : ctx.controls,
-            // geoObjects : ctx.geoObjects
-            geoObjects : objects
+            geoObjects : ctx.objects
         };
     })
 );

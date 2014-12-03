@@ -11,7 +11,9 @@ modules.define('map_provider_yandex',
             onSetMod : {
                 'js' : {
                     'inited' : function() {
-                        this._drawMap();
+                        if(this.getMod('provider') === 'yandex') {
+                            this._drawMap();
+                        }
                     }
                 }
             },
