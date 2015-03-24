@@ -1,0 +1,845 @@
+/* /Users/sipayrt/sites/hackaton/common.blocks/tabs/__box/tabs__box.css: begin */ /**/
+    .tabs__box
+    {
+        display: none;
+    }
+
+/* /Users/sipayrt/sites/hackaton/common.blocks/tabs/__box/tabs__box.css: end */ /**/
+
+/* /Users/sipayrt/sites/hackaton/common.blocks/tabs/__box/_selected/tabs__box_selected.css: begin */ /**/
+    .tabs__box_selected
+    {
+        display: block;
+    }
+
+/* /Users/sipayrt/sites/hackaton/common.blocks/tabs/__box/_selected/tabs__box_selected.css: end */ /**/
+
+/* /Users/sipayrt/sites/hackaton/test.blocks/page/page.styl:begin */
+.page {
+  padding: 20px;
+}
+/* /Users/sipayrt/sites/hackaton/test.blocks/page/page.styl:end */
+/* /Users/sipayrt/sites/hackaton/desktop.pages/presentation/blocks/page/page.styl:begin */
+.page {
+  padding: 0 100px;
+}
+.wrapper {
+  display: inline-block;
+  height: 350px;
+  width: 350px;
+  padding: 1em;
+  margin: 1em;
+}
+/* /Users/sipayrt/sites/hackaton/desktop.pages/presentation/blocks/page/page.styl:end */
+/* /Users/sipayrt/sites/hackaton/design/common.blocks/page/_theme/page_theme_islands.styl:begin */
+html {
+  min-height: 100%;
+}
+.page_theme_islands {
+  font: 13px/15px Arial, Helvetica, sans-serif;
+  min-height: 100%;
+  margin: 0;
+  color: #000;
+  background: #fff;
+}
+/* /Users/sipayrt/sites/hackaton/design/common.blocks/page/_theme/page_theme_islands.styl:end */
+/* /Users/sipayrt/sites/hackaton/desktop.pages/presentation/blocks/tabs/tabs.styl:begin */
+.tabs .progressbar {
+  width: 500px;
+}
+.tabs .tabs__container {
+  margin-top: 40px;
+}
+/* /Users/sipayrt/sites/hackaton/desktop.pages/presentation/blocks/tabs/tabs.styl:end */
+/* /Users/sipayrt/sites/hackaton/design/common.blocks/radio-group/_theme/radio-group_theme_islands.styl:begin */
+.radio-group_theme_islands {
+  display: inline-block;
+}
+.radio-group_theme_islands.radio-group_size_m {
+  line-height: 24px;
+}
+.radio-group_theme_islands.radio-group_size_l {
+  line-height: 30px;
+}
+.radio-group_theme_islands.radio-group_type_button {
+  display: inline-block;
+  white-space: nowrap;
+}
+.radio-group_theme_islands .radio_checked + .radio .button:before {
+  left: 0;
+}
+/* /Users/sipayrt/sites/hackaton/design/common.blocks/radio-group/_theme/radio-group_theme_islands.styl:end */
+/* /Users/sipayrt/sites/hackaton/design/common.blocks/button/_theme/button_theme_islands.styl:begin */
+.button_theme_islands {
+  font-family: Arial, Helvetica, sans-serif;
+  position: relative;
+  display: inline-block;
+  margin: 0;
+  padding: 0;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  color: #000;
+  border: 0;
+  border-radius: 3px;
+  outline: 0;
+  background: rgba(0,0,0,0.2);
+  text-align: center;
+  white-space: nowrap;
+/* Decorative element (inner background) */
+}
+.button_theme_islands::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+}
+.button_theme_islands .button__text {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  vertical-align: top;
+}
+.button_theme_islands .button__text {
+/*
+         * These rules fixes Opera 12+ && IE 9 bug with extra top margin when pressed
+         * Warning: bug still can be reproduced by clicking on button's border
+         * TODO: try to fix
+         */
+  position: relative;
+  display: inline-block;
+}
+.button_theme_islands .icon {
+  position: relative;
+}
+.button_theme_islands.button_type_link {
+  text-decoration: none;
+}
+.button_theme_islands:before {
+  position: absolute;
+  top: 1px;
+  right: 1px;
+  bottom: 1px;
+  left: 1px;
+  content: '';
+  border-radius: 2px;
+  background: #fff;
+}
+.button_theme_islands.button_hovered {
+  cursor: pointer;
+  background: rgba(0,0,0,0.3);
+}
+.button_theme_islands.button_focused-hard {
+  z-index: 1;
+  background: rgba(178,142,0,0.6);
+  box-shadow: 0 0 10px #fc0;
+}
+.button_theme_islands.button_pressed:before {
+  background: #f6f5f3;
+}
+.button_theme_islands.button_checked {
+  background: rgba(153,122,0,0.5);
+}
+.button_theme_islands.button_checked:before {
+  background: #ffeba0;
+}
+.button_theme_islands.button_checked.button_pressed {
+  background: rgba(129,103,0,0.6);
+}
+.button_theme_islands.button_checked.button_pressed:before {
+  background: #fee481;
+}
+.button_theme_islands.button_checked.button_hovered {
+  background: rgba(129,103,0,0.6);
+}
+.button_theme_islands.button_view_action {
+  background: rgba(191,153,0,0.8);
+}
+.button_theme_islands.button_view_action:before {
+  background: #ffdb4d;
+}
+.button_theme_islands.button_view_action.button_pressed:before {
+  background: #fc0;
+}
+.button_theme_islands.button_view_action.button_hovered {
+  background: rgba(159,127,0,0.8);
+}
+.button_theme_islands.button_view_pseudo {
+  overflow: hidden;
+  background: 0;
+}
+.button_theme_islands.button_view_pseudo:before {
+  background: 0;
+  box-shadow: 0 0 0 1px rgba(0,0,0,0.2);
+}
+.button_theme_islands.button_view_pseudo.button_hovered:before {
+  box-shadow: 0 0 0 1px rgba(0,0,0,0.3);
+}
+.button_theme_islands.button_view_pseudo.button_focused-hard:before {
+  box-shadow: 0 0 0 1px rgba(178,142,0,0.6);
+}
+.button_theme_islands.button_view_pseudo.button_pressed:before {
+  background: rgba(0,0,0,0.05);
+}
+.button_theme_islands.button_view_pseudo.button_checked:before {
+  background: #ffeba0;
+  box-shadow: 0 0 0 1px rgba(153,122,0,0.5);
+}
+.button_theme_islands.button_view_pseudo.button_checked.button_hovered:before {
+  box-shadow: 0 0 0 1px rgba(129,103,0,0.6);
+}
+.button_theme_islands.button_view_pseudo.button_checked.button_pressed:before {
+  background: #fee481;
+  box-shadow: 0 0 0 1px rgba(129,103,0,0.6);
+}
+.button_theme_islands.button_disabled {
+  background: rgba(0,0,0,0.08);
+}
+.button_theme_islands.button_disabled:before {
+  display: none;
+}
+.button_theme_islands.button_disabled.button_checked:before {
+  display: block;
+  background: #ffeba0;
+}
+.button_theme_islands.button_disabled .button__text {
+  color: #aaa;
+}
+.button_theme_islands.button_disabled .icon {
+  opacity: 0.3;
+}
+.button_theme_islands.button_size_s {
+  font-size: 13px;
+  line-height: 24px;
+}
+.button_theme_islands.button_size_s .icon {
+  width: 24px;
+}
+.button_theme_islands.button_size_s .button__text {
+  margin: 0 10px;
+}
+.button_theme_islands.button_size_m {
+  font-size: 13px;
+  line-height: 28px;
+}
+.button_theme_islands.button_size_m .icon {
+  width: 28px;
+}
+.button_theme_islands.button_size_m .button__text {
+  margin: 0 13px;
+}
+.button_theme_islands.button_size_l {
+  font-size: 15px;
+  line-height: 32px;
+}
+.button_theme_islands.button_size_l .icon {
+  width: 32px;
+}
+.button_theme_islands.button_size_l .button__text {
+  margin: 0 15px;
+}
+.button_theme_islands.button_size_xl {
+  font-size: 18px;
+  line-height: 38px;
+}
+.button_theme_islands.button_size_xl .icon {
+  width: 38px;
+}
+.button_theme_islands.button_size_xl .button__text {
+  margin: 0 18px;
+}
+.button_theme_islands .icon + .button__text {
+  margin-left: 0;
+}
+.button_theme_islands .button__text:not(:last-child) {
+  margin-right: 0;
+}
+.control-group .button_theme_islands {
+  border-radius: 0;
+}
+.control-group .button_theme_islands:before {
+  right: 0;
+  border-radius: 0;
+}
+.control-group .button_theme_islands.button_checked:before {
+  left: 1px;
+  right: 1px;
+}
+.control-group > .button_theme_islands:first-child,
+.control-group > :first-child .button_theme_islands {
+  border-radius: 3px 0 0 3px;
+}
+.control-group > .button_theme_islands:first-child:before,
+.control-group > :first-child .button_theme_islands:before {
+  border-radius: 2px 0 0 2px;
+}
+.control-group > .button_theme_islands:last-child,
+.control-group > :last-child .button_theme_islands {
+  border-radius: 0 3px 3px 0;
+}
+.control-group > .button_theme_islands:last-child:before,
+.control-group > :last-child .button_theme_islands:before {
+  border-radius: 0 2px 2px 0;
+  right: 1px;
+}
+.control-group > :only-child .button_theme_islands {
+  border-radius: 3px;
+}
+.control-group > :only-child .button_theme_islands:before {
+  border-radius: 2px;
+}
+/* /Users/sipayrt/sites/hackaton/design/common.blocks/button/_theme/button_theme_islands.styl:end */
+/* /Users/sipayrt/sites/hackaton/design/common.blocks/radio/_theme/radio_theme_islands.styl:begin */
+.radio_theme_islands {
+  font-family: Arial, Helvetica, sans-serif;
+}
+.radio_theme_islands:hover {
+  cursor: pointer;
+}
+.radio_theme_islands .radio__control {
+  position: absolute;
+  z-index: -1;
+  margin: 0;
+  opacity: 0;
+}
+.radio_theme_islands .radio__box {
+  position: relative;
+  display: inline-block;
+  border-radius: 50%;
+  background: rgba(0,0,0,0.2);
+}
+.radio_theme_islands .radio__box:before {
+  position: absolute;
+  top: 1px;
+  right: 1px;
+  bottom: 1px;
+  left: 1px;
+  content: '';
+  border-radius: 50%;
+  background: #fff;
+}
+.radio_theme_islands.radio_size_m {
+  font-size: 13px;
+}
+.radio_theme_islands.radio_size_m .radio__box {
+  line-height: 14px;
+  top: 2px;
+  width: 14px;
+  height: 14px;
+  margin-right: 5px;
+}
+.radio_theme_islands.radio_size_m .radio__box:after {
+  top: 4px;
+  left: 4px;
+  width: 6px;
+  height: 6px;
+}
+.radio_theme_islands.radio_size_l {
+  font-size: 15px;
+}
+.radio_theme_islands.radio_size_l .radio__box {
+  line-height: 17px;
+  top: 3px;
+  width: 17px;
+  height: 17px;
+  margin-right: 7px;
+}
+.radio_theme_islands.radio_size_l .radio__box:after {
+  top: 5px;
+  left: 5px;
+  width: 7px;
+  height: 7px;
+}
+.radio_theme_islands.radio_checked .radio__box {
+  background: rgba(153,122,0,0.5);
+}
+.radio_theme_islands.radio_checked .radio__box:before {
+  background: #ffeba0;
+}
+.radio_theme_islands.radio_checked .radio__box:after {
+  position: absolute;
+  border-radius: 50%;
+  background: #000;
+  content: '';
+}
+.radio_theme_islands.radio_focused .radio__box {
+  box-shadow: 0 0 10px #fc0;
+}
+.radio_theme_islands.radio_hovered .radio__box {
+  background: rgba(0,0,0,0.3);
+}
+.radio_theme_islands.radio_hovered.radio_checked .radio__box {
+  background: rgba(129,103,0,0.6);
+}
+.radio_theme_islands.radio_disabled {
+  cursor: default;
+  color: #999;
+}
+.radio_theme_islands.radio_disabled .radio__box {
+  background: rgba(0,0,0,0.08);
+}
+.radio_theme_islands.radio_disabled .radio__box:before {
+  display: none;
+}
+.radio_theme_islands.radio_disabled .radio__box:after {
+  background: rgba(0,0,0,0.4);
+}
+.radio_theme_islands.radio_type_button {
+  display: inline-block;
+}
+.radio_theme_islands.radio_type_line.radio_size_m {
+  margin-right: 13px;
+}
+.radio_theme_islands.radio_type_line.radio_size_l {
+  margin-right: 15px;
+}
+.radio_theme_islands.radio_type_line:last-child {
+  margin-right: 0;
+}
+/* /Users/sipayrt/sites/hackaton/design/common.blocks/radio/_theme/radio_theme_islands.styl:end */
+/* /Users/sipayrt/sites/hackaton/design/common.blocks/radio-group/_theme/radio-group_theme_simple.styl:begin */
+.radio-group_theme_simple .radio_type_button:first-of-type .button_togglable_radio,
+.radio-group_theme_simple .radio_type_button~ .radio_type_button .button_togglable_radio {
+  border-right-width: 0;
+}
+.radio-group_theme_simple .radio_type_button~ .radio_type_button .button_togglable_radio {
+  border-radius: 0;
+}
+.radio-group_theme_simple .radio_type_button:first-of-type .button_togglable_radio {
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+}
+.radio-group_theme_simple .radio_type_button:last-of-type .button_togglable_radio {
+  border-right-width: 1px;
+  border-top-right-radius: 3px;
+  border-bottom-right-radius: 3px;
+}
+/* /Users/sipayrt/sites/hackaton/design/common.blocks/radio-group/_theme/radio-group_theme_simple.styl:end */
+/* /Users/sipayrt/sites/hackaton/design/common.blocks/button/_theme/button_theme_simple.styl:begin */
+.button_theme_simple {
+  font-family: inherit;
+  font-size: 100%;
+  line-height: 100%;
+  display: inline-block;
+  margin: 0;
+  padding: 0.2em 1em;
+  text-align: center;
+  border: 1px solid rgba(0,0,0,0.3);
+  outline: 0;
+  border-radius: 3px;
+  color: #000;
+  background: #fff;
+}
+.button_theme_simple::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+}
+.button_theme_simple .button__text {
+  position: relative;
+}
+.button_theme_simple.button_type_link {
+  text-decoration: none;
+}
+.button_theme_simple.button_disabled {
+  opacity: 0.6;
+}
+.button_theme_simple.button_focused-hard {
+  box-shadow: 0 0 5px 1px #fc0;
+}
+.button_theme_simple.button_hovered {
+  border-color: rgba(0,0,0,0.5);
+}
+.button_theme_simple.button_checked {
+  background: #fff7db;
+}
+.button_theme_simple.button_pressed {
+  background: #fff7db;
+  box-shadow: inset 0 0 1px 1px rgba(0,0,0,0.1);
+}
+.button_theme_simple.button_pressed.button_focused-hard {
+  box-shadow: inset 0 0 1px 1px rgba(0,0,0,0.1), 0 0 5px 1px #fc0;
+}
+.button_theme_simple.button_pressed .button__text,
+.button_theme_simple.button_pressed .icon {
+  position: relative;
+  top: 1px;
+}
+.button_theme_simple .icon {
+  width: 1em;
+  margin-left: -0.7em;
+}
+.button_theme_simple .icon + .button__text {
+  margin-left: 0.3em;
+}
+.button_theme_simple .icon:last-child {
+  margin-right: -0.7em;
+}
+/* /Users/sipayrt/sites/hackaton/design/common.blocks/button/_theme/button_theme_simple.styl:end */
+/* /Users/sipayrt/sites/hackaton/design/common.blocks/radio/_theme/radio_theme_simple.styl:begin */
+.radio_theme_simple .radio__control {
+  position: absolute;
+  z-index: -1;
+  opacity: 0;
+}
+.radio_theme_simple .radio__box:before {
+  line-height: 1em;
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  margin: 0.1em 0.2em 0.3em;
+  content: ' ';
+  text-align: center;
+  vertical-align: middle;
+  border-radius: 50%;
+  background: #fff;
+  box-shadow: inset 0 0 1px 1px rgba(0,0,0,0.5);
+}
+.radio_theme_simple.radio_disabled {
+  opacity: 0.6;
+}
+.radio_theme_simple.radio_focused .radio__box:before {
+  box-shadow: 0 0 5px 1px #fc0;
+}
+.radio_theme_simple.radio_checked .radio__box:before {
+  content: '\2022';
+  background: #fff7db;
+}
+/* /Users/sipayrt/sites/hackaton/design/common.blocks/radio/_theme/radio_theme_simple.styl:end */
+/* /Users/sipayrt/sites/hackaton/common.blocks/radio/_type/radio_type_button.styl:begin */
+.radio.radio_type_button .radio__control {
+  position: absolute;
+  visibility: hidden;
+}
+/* /Users/sipayrt/sites/hackaton/common.blocks/radio/_type/radio_type_button.styl:end */
+/* /Users/sipayrt/sites/hackaton/design/common.blocks/tabs/_theme/tabs_theme_islands.styl:begin */
+.tabs_theme_islands .radio-group_type_button {
+  margin-bottom: 10px;
+}
+.tabs_theme_islands .radio_theme_islands.radio_type_line {
+  font-size: 15px;
+  line-height: 36px;
+  position: relative;
+  display: inline-block;
+  margin-right: 16px;
+  cursor: pointer;
+  -webkit-transition: color 0.3s ease;
+  transition: color 0.3s ease;
+  color: #44b;
+}
+.tabs_theme_islands .radio_theme_islands.radio_type_line .radio__box {
+  position: absolute;
+  visibility: hidden;
+}
+.tabs_theme_islands .radio_theme_islands.radio_type_line.radio_checked {
+  color: #000;
+}
+.tabs_theme_islands .radio_theme_islands.radio_type_line.radio_checked:before {
+  position: absolute;
+  top: -1px;
+  right: 0;
+  left: 0;
+  content: '';
+  border-bottom: 2px solid;
+}
+.tabs_theme_islands .radio_theme_islands.radio_type_line:hover {
+  color: #d00;
+}
+/* /Users/sipayrt/sites/hackaton/design/common.blocks/tabs/_theme/tabs_theme_islands.styl:end */
+/* /Users/sipayrt/sites/hackaton/common.blocks/progressbar/__box/progressbar__box.styl:begin */
+.progressbar__box {
+  position: relative;
+}
+/* /Users/sipayrt/sites/hackaton/common.blocks/progressbar/__box/progressbar__box.styl:end */
+/* /Users/sipayrt/sites/hackaton/design/common.blocks/progressbar/_theme/progressbar_theme_hackaton.styl:begin */
+.progressbar_theme_hackaton {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  padding: 0 8px;
+  background: #f4f4f4;
+}
+.progressbar_theme_hackaton .progressbar__bar {
+  height: 100%;
+  background: rgba(255,255,255,0.7);
+}
+.progressbar_theme_hackaton.progressbar_size_s {
+  height: 30px;
+}
+.progressbar_theme_hackaton.progressbar_size_s .progressbar__box {
+  height: 15px;
+}
+.progressbar_theme_hackaton.progressbar_size_m {
+  height: 40px;
+}
+.progressbar_theme_hackaton.progressbar_size_m .progressbar__box {
+  height: 20px;
+}
+.progressbar_theme_hackaton .progressbar__box {
+  padding: 1px;
+  background: -webkit-linear-gradient(left, #2de254 0%, #47a0e5 100%);
+  background: linear-gradient(to right, #2de254 0%, #47a0e5 100%);
+  -webkit-box-flex: 1;
+  -webkit-flex: 1 0 auto;
+  -ms-flex: 1 0 auto;
+  flex: 1 0 auto;
+}
+.progressbar_theme_hackaton .progressbar__text {
+  font-family: 'Verdana', sans-serif;
+  min-width: 3em;
+  padding-left: 5px;
+  text-align: right;
+}
+.progressbar_size_s .progressbar_theme_hackaton .progressbar__text {
+  font-size: 12px;
+}
+.progressbar_size_m .progressbar_theme_hackaton .progressbar__text {
+  font-size: 14px;
+}
+/* /Users/sipayrt/sites/hackaton/design/common.blocks/progressbar/_theme/progressbar_theme_hackaton.styl:end */
+/* /Users/sipayrt/sites/hackaton/common.blocks/progressbar/_text/progressbar_text.styl:begin */
+.progressbar__text:after {
+  content: '%';
+}
+/* /Users/sipayrt/sites/hackaton/common.blocks/progressbar/_text/progressbar_text.styl:end */
+/* /Users/sipayrt/sites/hackaton/design/common.blocks/progressbar/_theme/progressbar_theme_islands.styl:begin */
+.progressbar_theme_islands .progressbar__bar {
+  height: 2px;
+  background: #fc0;
+}
+/* /Users/sipayrt/sites/hackaton/design/common.blocks/progressbar/_theme/progressbar_theme_islands.styl:end */
+/* /Users/sipayrt/sites/hackaton/test.blocks/link/link.styl:begin */
+.link_pseudo:not([class*="link_theme"]) {
+  cursor: pointer;
+  color: #00f;
+}
+.link_pseudo:not([class*="link_theme"]):hover {
+  color: #f00;
+}
+/* /Users/sipayrt/sites/hackaton/test.blocks/link/link.styl:end */
+/* /Users/sipayrt/sites/hackaton/design/common.blocks/link/_theme/link_theme_islands.styl:begin */
+.link_theme_islands {
+  color: #44b;
+  cursor: pointer;
+  -webkit-transition: color 0.15s ease-out;
+  transition: color 0.15s ease-out;
+  text-decoration: none;
+  -webkit-tap-highlight-color: rgba(0,0,0,0.1);
+}
+.link_theme_islands.link_view_minor {
+  color: #669;
+}
+.link_theme_islands.link_view_external {
+  color: #070;
+}
+.link_theme_islands:hover {
+  color: #e00;
+}
+/* /Users/sipayrt/sites/hackaton/design/common.blocks/link/_theme/link_theme_islands.styl:end */
+/* /Users/sipayrt/sites/hackaton/design/common.blocks/cut/_theme/cut_theme_simple.styl:begin */
+.cut_theme_simple >.cut__container {
+  display: none;
+  margin: 1em auto;
+}
+.cut_theme_simple >.cut__container_visible {
+  display: block;
+}
+/* /Users/sipayrt/sites/hackaton/design/common.blocks/cut/_theme/cut_theme_simple.styl:end */
+/* /Users/sipayrt/sites/hackaton/design/common.blocks/map/map.styl:begin */
+.map {
+  height: 100%;
+  width: 100%;
+}
+/* /Users/sipayrt/sites/hackaton/design/common.blocks/map/map.styl:end */
+/* /Users/sipayrt/sites/hackaton/common.blocks/dragndrop/dragndrop.styl:begin */
+.dragndrop {
+  position: relative;
+}
+.dragndrop_drag {
+  opacity: 0.5;
+}
+/* /Users/sipayrt/sites/hackaton/common.blocks/dragndrop/dragndrop.styl:end */
+/* /Users/sipayrt/sites/hackaton/desktop.pages/presentation/blocks/dragndrop/dragndrop.styl:begin */
+.dragndrop_eye {
+  width: 80px;
+  height: 80px;
+  border: 10px solid #000;
+  border-radius: 50%;
+}
+.dragndrop_eye:before {
+  content: '';
+  position: absolute;
+  top: 30px;
+  left: 25px;
+  width: 40px;
+  height: 40px;
+  background: none repeat scroll 0 0 #000;
+  border-radius: 50%;
+}
+.dragndrop_face {
+  width: 400px;
+  height: 500px;
+  border: 3px solid #000;
+  border-radius: 50%;
+}
+.dragndrop_hat {
+  width: 240px;
+  height: 100px;
+  background: #adff2f;
+  z-index: 1;
+}
+.dragndrop_hat:before {
+  content: '';
+  position: absolute;
+  right: -30px;
+  bottom: 0;
+  width: 300px;
+  height: 30px;
+  background: #adff2f;
+}
+.dragndrop_mouth {
+  width: 140px;
+  height: 0;
+  border-bottom: 20px solid #f00;
+  border-bottom-left-radius: 50%;
+  border-bottom-right-radius: 50%;
+}
+.dragndrop_nose {
+  width: 80px;
+  height: 40px;
+}
+.dragndrop_nose:before,
+.dragndrop_nose:after {
+  content: '';
+  position: absolute;
+  top: 10px;
+  width: 20px;
+  height: 20px;
+  background: none repeat scroll 0 0 #000;
+  border-radius: 50%;
+}
+.dragndrop_nose:before {
+  left: 14px;
+}
+.dragndrop_nose:after {
+  left: 46px;
+}
+/* /Users/sipayrt/sites/hackaton/desktop.pages/presentation/blocks/dragndrop/dragndrop.styl:end */
+/* /Users/sipayrt/sites/hackaton/desktop.pages/presentation/blocks/calendar/calendar.styl:begin */
+.calendar {
+  margin-bottom: 20px;
+}
+/* /Users/sipayrt/sites/hackaton/desktop.pages/presentation/blocks/calendar/calendar.styl:end */
+/* /Users/sipayrt/sites/hackaton/design/common.blocks/calendar/_theme/calendar_theme_simple.styl:begin */
+.calendar_theme_simple {
+  display: inline-block;
+  font-size: 14px;
+  text-align: center;
+  line-height: 18px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.calendar_theme_simple .calendar__content {
+  position: relative;
+}
+.calendar_theme_simple .calendar__switcher,
+.calendar_theme_simple .calendar__title {
+  display: inline-block;
+  vertical-align: middle;
+}
+.calendar_theme_simple .calendar__title {
+  margin: 0 15px;
+}
+.calendar_theme_simple .calendar__cell {
+  padding: 4px 7px;
+  -webkit-transition: background 0.3s;
+  transition: background 0.3s;
+  cursor: pointer;
+}
+.calendar_theme_simple .calendar__cell:hover {
+  background: #fff7db;
+}
+.calendar_theme_simple .calendar__cell_state_active {
+  background: #fff4a8;
+}
+.calendar_theme_simple .calendar__cell_state_disable {
+  opacity: 0.3;
+}
+.calendar_theme_simple .calendar__cell_state_disable:hover {
+  background: none !important;
+  cursor: default !important;
+}
+.calendar_theme_simple .calendar__grid {
+  margin: 10px auto 0;
+  border-top: 1px solid #fc0;
+  padding: 10px 0 0;
+}
+.calendar_theme_simple .calendar__switcher {
+  -webkit-transition: -webkit-transform 0.3s;
+  transition: transform 0.3s;
+  cursor: pointer;
+  position: absolute;
+  top: 4px;
+}
+.calendar_theme_simple .calendar__switcher_dest_prev {
+  left: 13px;
+}
+.calendar_theme_simple .calendar__switcher_dest_prev:before {
+  content: '← ';
+}
+.calendar_theme_simple .calendar__switcher_dest_prev:hover {
+  -webkit-transform: translateX(-3px);
+  transform: translateX(-3px);
+}
+.calendar_theme_simple .calendar__switcher_dest_next {
+  right: 13px;
+}
+.calendar_theme_simple .calendar__switcher_dest_next:after {
+  content: ' →';
+}
+.calendar_theme_simple .calendar__switcher_dest_next:hover {
+  -webkit-transform: translateX(3px);
+  transform: translateX(3px);
+}
+/* /Users/sipayrt/sites/hackaton/design/common.blocks/calendar/_theme/calendar_theme_simple.styl:end */
+/* /Users/sipayrt/sites/hackaton/design/common.blocks/calendar/_theme/calendar_theme_islands.styl:begin */
+.calendar_theme_islands {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 14px;
+  line-height: 18px;
+}
+.calendar_theme_islands .calendar__title {
+  text-align: left;
+  text-transform: uppercase;
+  color: #999;
+}
+.calendar_theme_islands .calendar__cell {
+  padding: 6px 8px;
+  cursor: pointer;
+}
+.calendar_theme_islands .calendar__cell_state_active,
+.calendar_theme_islands .calendar__cell:hover {
+  padding: 5px 7px;
+  border: 1px solid rgba(3,3,3,0.2);
+  border-radius: 3px;
+}
+.calendar_theme_islands .calendar__cell:nth-child(n + 6) {
+  color: #e00;
+}
+.calendar_theme_islands .calendar__cell_state_disable {
+  opacity: 0.3;
+}
+.calendar_theme_islands .calendar__cell_state_disable:hover {
+  padding: 6px 8px;
+  cursor: default !important;
+  border: none !important;
+}
+.calendar_theme_islands .calendar__grid {
+  margin: 10px 0 0;
+  text-align: center;
+}
+.calendar_theme_islands .calendar__switcher {
+  display: none;
+}
+/* /Users/sipayrt/sites/hackaton/design/common.blocks/calendar/_theme/calendar_theme_islands.styl:end */
